@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Statistics from "../Statistics/Statistics"
+import Statistics from '../Statistics/Statistics';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Section from '../Section/Section';
 import Notification from '../Notification/Notification';
@@ -43,20 +43,19 @@ class App extends React.Component {
             options={feedbackOptions}
             onLeaveFeedback={this.handleFeedback}
           />
-        </Section>
-
-        <Section title="Statistics">
-          {hasFeedback ? (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={totalFeedback}
-              positivePercentage={positivePercentage}
-            />
-          ) : (
-            <Notification message="There is no feedback" />
-          )}
+          <Section title="Statistics">
+            {hasFeedback ? (
+              <Statistics
+                good={good}
+                neutral={neutral}
+                bad={bad}
+                total={totalFeedback}
+                positivePercentage={positivePercentage}
+              />
+            ) : (
+              <Notification message="There is no feedback" />
+            )}
+          </Section>
         </Section>
       </div>
     );

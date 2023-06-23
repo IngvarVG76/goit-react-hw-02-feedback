@@ -1,6 +1,3 @@
-
-
-
 const Section = ({ title, children }) => {
   return (
     <div>
