@@ -1,9 +1,11 @@
+import { Heading, SectionWrap } from 'components';
+
 const Section = ({ title, children }) => {
   return (
-    <div>
-      <h1>{title}</h1>
+    <SectionWrap>
+      <Heading>{title}</Heading>
       {children}
-    </div>
+    </SectionWrap>
   );
 };
 

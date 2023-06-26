@@ -1,9 +1,9 @@
 import React from 'react';
-
 import Statistics from '../Statistics/Statistics';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Section from '../Section/Section';
 import Notification from '../Notification/Notification';
+import { Container } from 'components';
 
 class App extends React.Component {
   state = {
@@ -37,7 +37,7 @@ class App extends React.Component {
     const hasFeedback = totalFeedback > 0;
 
     return (
-      <div>
+      <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={feedbackOptions}
@@ -57,7 +57,7 @@ class App extends React.Component {
             )}
           </Section>
         </Section>
-      </div>
+      </Container>
     );
   }
 }

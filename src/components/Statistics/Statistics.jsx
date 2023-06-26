@@ -1,13 +1,16 @@
+import { StatisticsWrap, StatisticsText } from 'components';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
-    <div>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback percentage: {positivePercentage}%</p>
-    </div>
+    <StatisticsWrap>
+      <StatisticsText>Good: {good}</StatisticsText>
+      <StatisticsText>Neutral: {neutral}</StatisticsText>
+      <StatisticsText>Bad: {bad}</StatisticsText>
+      <StatisticsText>Total: {total}</StatisticsText>
+      <StatisticsText>
+        Positive feedback percentage: {positivePercentage}%
+      </StatisticsText>
+    </StatisticsWrap>
   );
 };
 

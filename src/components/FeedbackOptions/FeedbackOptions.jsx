@@ -1,14 +1,15 @@
 import capitalizeFirstLetter from '../../helpers/helpers';
+import { Feedback, FeedbackBtn } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <Feedback>
       {options.map(option => (
-        <button key={option} onClick={() => onLeaveFeedback(option)}>
+        <FeedbackBtn key={option} onClick={() => onLeaveFeedback(option)}>
           {capitalizeFirstLetter(option)}
-        </button>
+        </FeedbackBtn>
       ))}
-    </div>
+    </Feedback>
   );
 };
 
