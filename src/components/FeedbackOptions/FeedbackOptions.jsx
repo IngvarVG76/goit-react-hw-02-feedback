@@ -1,4 +1,4 @@
-import capitalizeFirstLetter from '../../helpers/helpers';
+import PropTypes from 'prop-types';
 import { Feedback, FeedbackBtn } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -6,11 +6,16 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <Feedback>
       {options.map(option => (
         <FeedbackBtn key={option} onClick={() => onLeaveFeedback(option)}>
-          {capitalizeFirstLetter(option)}
+          {option}
         </FeedbackBtn>
       ))}
     </Feedback>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;

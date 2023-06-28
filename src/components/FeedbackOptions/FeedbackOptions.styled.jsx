@@ -15,6 +15,7 @@ export const FeedbackBtn = styled.button`
   border-radius: 4px;
   cursor: pointer;
   width: 100px;
+  text-transform: capitalize;
 
   &:hover {
     background-color: blue;
